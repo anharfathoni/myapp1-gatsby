@@ -1,0 +1,74 @@
+.Banner {
+  width: 100%;
+  position: relative;
+}
+
+.Banner img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.BannerText {
+  width: 50%;
+  height: 105vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0px 0px 20px;
+}
+
+.Banner h2 {
+  margin: 0px;
+  color: #ffffff;
+  font-size: 50px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: BannerAnimation 3s cubic-bezier(0.075, 0.82, 0.2, 1) forwards;
+}
+
+.Banner p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 22px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: BannerAnimation 3s cubic-bezier(0.075, 0.82, 0.2, 1) 0.2s forwards;
+}
+
+.Banner button {
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 15px 30px;
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  outline: none;
+  background-color: rgba(15, 76, 104, 0.541);
+  color: white;
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Banner button:hover {
+  background-color: white;
+  color: black;
+  transform: translate(-2px, -5px);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.Banner svg {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+@keyframes BannerAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
